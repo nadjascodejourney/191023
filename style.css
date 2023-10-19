@@ -1,0 +1,63 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(236, 226, 193);
+}
+
+/* um dem parent element header Höhen- und Breitenangaben zu geben, auf die wir uns im weiteren Verlauf beziehen können (s. Zeile 15) */
+.main-header {
+  height: 100vh;
+  width: 100vh;
+  /* oder auch möglich z. B.: height: 500px; */
+  /* am besten aber 100vh */
+}
+
+/* damit header img einen bestimmten Anteil von parent main.header bekommt: */
+.header-img {
+  height: 60%;
+  width: 100%;
+}
+
+div.first {
+  border: 2px solid orange;
+  /* default width is auto */
+  /* kann man mit % oder px angeben; siehe auch: Thema Units  */
+  /* width: 50%; */
+
+  /* dieses div kann man nur anders positionieren, wenn es kleiner als 100% ist (ansonsten zieht es sich immer über die ganze Seite (horizontal) > unten beim zweiten Beispiel kann man sehen, wie das mit dem Positionieren funktioniert*/
+  width: 350px;
+}
+
+.container {
+  color: rgb(23, 76, 94);
+  background-color: aliceblue;
+  padding: 2em;
+  /* padding besser mit em angeben, statt mit px (siehe Thema Units) */
+}
+
+.second {
+  border: 10px solid seagreen;
+  width: 300px;
+  /* mittig platzieren z. B. mit margin auto > gibt der Box von links und rechts den gleichen Abstand, sodass die Box in der Mitte steht. Default Werte sind hier 40px; Wenn man oben und unten gar nichts haben möchte, schreibt man margin: 0 auto */
+  margin: auto;
+}
+
+.third {
+  border: 3px solid salmon;
+  width: 500px;
+  height: 100px;
+  overflow: auto;
+  /* height: 50px;
+  in dem Fall ist die Box von der Höhe her zu klein für die Textmenge > der Text, der nicht reinpasst, fliegt über die Boxgrenzen hinaus raus = OVERFLOW > wenn wir den overflow nicht näher definieren, ist er per default visible*/
+
+  /* overflow default value */
+  /* overflow-x and -y */
+  /* overflow other values => hidden scroll auto */
+  /* overflow: auto is the best option! */
+}
+
+aside {
+  margin-left: auto;
+  width: 30%;
+  padding: 1em;
+  background-color: lightgrey;
+}
